@@ -1,0 +1,28 @@
+---
+
+__installation_root_folder: "/opt/Experitest"
+installation_folder: "{{ installation_root_folder }}/{{ app_name }}-{{ app_version }}"
+
+temp_folder: "/var/tmp/Experitest"
+
+service_name: "{{ app_name }}.service"
+
+service_file_path: "/etc/systemd/system/{{ service_name }}"
+
+installer_file_name: "share-manager-{{ app_version }}.zip"
+relative_path: "share-manager/linux"
+
+launcher_file_name: "share-manager"
+
+java_download_filename: "OpenJDK8U-jre_x64_linux_hotspot_{{ java_version }}.tar.gz"
+
+java_relative_path: "java/linux"
+
+java_installation_folder: "{{ installation_root_folder }}/jre"
+
+java_home: "{{ java_installation_folder }}/jdk{{ java_version }}-jre"
+
+java_bin: "{{ java_home }}/bin/java"
+
+__custom_download_username: "myuser"
+__custom_download_password: "mypassword"

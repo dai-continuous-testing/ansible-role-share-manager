@@ -1,0 +1,18 @@
+# Systemd unit file for {{ app_name }} service
+[Unit]
+Description={{ app_name }} service
+
+[Service]
+WorkingDirectory={{ installation_folder }}
+Environment="JAVA_HOME={{java_home}}"
+Environment="SHARE_MANAGER_OPTS={{java_options | join(' ')}}"
+ExecStart={{ installation_folder }}/bin/{{ launcher_file_name }}
+
+# ExecStop=/bin/pkill -15 java
+# StandardOutput=syslog
+# StandardError=syslog
+# User={{ service_username | default(ansible_user_id) }}
+
+
+[Install]
+WantedBy=multi-user.target
