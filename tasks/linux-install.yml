@@ -58,6 +58,7 @@
 
 - name: Get the list of services running on machine
   service_facts:
+  become: yes
 
 - name: stop the old service
   systemd:
