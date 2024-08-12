@@ -60,6 +60,11 @@
   service_facts:
   become: yes
 
+- name: Debug
+  debug:
+    var: ansible_facts.services[service_name]
+  become: yes
+
 - name: stop the old service
   systemd:
     name: "{{ service_name }}"
