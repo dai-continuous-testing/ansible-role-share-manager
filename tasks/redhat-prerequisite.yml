@@ -6,6 +6,7 @@
     state: present
     lock_timeout: 180
   become: yes
+  when: (ansible_facts.distribution | lower) not 'amazon' # EPEL not required for amazon linux
 
 - name: make sure rsync is installed
   yum:
