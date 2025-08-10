@@ -12,8 +12,6 @@ app_name: share-manager
 
 __app_version: 23.5.613
 
-__image_version: 23.5
-
 __server_port: 8080
 
 __java_version: 17.0.3_7
@@ -25,7 +23,6 @@ java_options: "{{ extra_java_options }}"
 # basic application properties
 base_application_properties:
   - "server.port": "{{ server_port }}"
-  - "sharemgr.docker.image.default.version": "{{ image_version }}"
 
 extra_application_properties: {}
 
