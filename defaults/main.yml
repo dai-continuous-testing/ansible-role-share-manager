@@ -14,7 +14,7 @@ __app_version: 25.6.1451
 
 __server_port: 8080
 
-__java_version: 17.0.3_7
+__java_version: 17.0.18_8
 
 extra_java_options: []
 java_options: "{{ extra_java_options }}"
